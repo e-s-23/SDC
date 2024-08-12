@@ -11,13 +11,12 @@ ENV TZ Asia/Tokyo
 ENV TERM xterm
 
 # pip install
-RUN pip install --upgrade pip
-RUN pip install --upgrade setuptools
+COPY requirements.txt /bot/
 RUN pip install -r requirements.txt
 COPY . /bot
 
 # ポート開放 (uvicornで指定したポート)
-EXPOSE 8000
+EXPOSE 800
 
 # 実行
-CMD python app/bot.py
+CMD python app/main.py
