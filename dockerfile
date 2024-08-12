@@ -19,4 +19,4 @@ COPY . /bot
 EXPOSE 8000
 
 # 実行
-CMD python c_discord/bot.py
+CMD python app/bot.py
