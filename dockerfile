@@ -11,12 +11,11 @@ ENV TZ Asia/Tokyo
 ENV TERM xterm
 
 # pip install
-COPY requirements.txt /bot/
+COPY requirements.txt /SDC
 RUN pip install -r requirements.txt
-COPY . /bot
 
 # ポート開放 (uvicornで指定したポート)
-EXPOSE 800
+EXPOSE 8000
 
 # 実行
-CMD python app/main.py
+CMD python app/bot.py
