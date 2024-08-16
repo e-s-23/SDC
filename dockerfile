@@ -11,7 +11,7 @@ ENV TZ Asia/Tokyo
 ENV TERM xterm
 
 # pip install
-COPY requirements.txt /SDC
+COPY requirements.txt /SDC/
 RUN pip install -r requirements.txt
 
 # ポート開放 (uvicornで指定したポート)
